@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Yami 💖</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #181127 13%, #a21caf 50%, #d8b4fe 82%, #f9a8d4 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .hearts-row {
+      width: 100%;
+      margin-top: 14px;
+      margin-bottom: -10px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+    .heart-row-shape {
+      font-size: 2em;
+      color: #ec4899;
+      animation: pulseHeart 2.8s infinite;
+      filter: drop-shadow(0 2px 8px #d8b4fe);
+    }
+    @keyframes pulseHeart {
+      0%,100% { transform: scale(1);}
+      45% { transform: scale(1.13);}
+      65% { transform: scale(.9);}
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #a21caf;
+      text-shadow: 0 2px 17px #f9a8d4;
+      letter-spacing: .08em;
+      background: linear-gradient(90deg, #d8b4fe 10%, #a21caf 30%, #f472b6 80%, #ec4899 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 18px;
+      margin-bottom: 4px;
+      display: inline-block;
+      position: relative;
+    }
+    .sparkle {
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      width: 28px;
+      height: 28px;
+      background: url('https://cdn.pixabay.com/photo/2017/01/31/12/23/star-2028905_1280.png') center/contain no-repeat;
+      opacity: 0.28;
+      animation: sparkleGlow 3.6s infinite;
+      pointer-events: none;
+    }
+    @keyframes sparkleGlow {
+      0% {opacity:0.15; transform: scale(.7);}
+      60% {opacity:0.43; transform: scale(1.1);}
+      100% {opacity:0.13; transform: scale(.63);}
+    }
+    .card {
+      background: rgba(34, 27, 43, 0.94);
+      box-shadow: 0 16px 50px rgba(162, 28, 175, 0.12);
+      border-radius: 32px;
+      border: 2.2px solid #a21caf;
+      max-width: 410px;
+      margin: 36px auto 0 auto;
+      padding: 32px 16px 22px 16px;
+      position: relative;
+      z-index: 2;
+    }
+    .img-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 174px;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px #a21caf99, 0 0 0 5px #ec4899;
+      background-color: #f9a8d4;
+      margin-top: 0;
+      transition: box-shadow .3s;
+    }
+    img:hover {
+      box-shadow: 0 8px 44px #d8b4fe, 0 0 0 8px #f472b6;
+    }
+    .divider {
+      height: 2px;
+      width: 78px;
+      background: linear-gradient(90deg, #f9a8d4 5%, #a21caf 32%, #d8b4fe 95%);
+      border-radius: 2px;
+      margin: 13px auto 21px auto;
+      opacity: 0.7;
+    }
+    .message {
+      color: #fff;
+      font-size: 1.18em;
+      line-height: 1.77;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: .018em;
+      padding-left: 6px;
+      padding-right: 6px;
+      margin-bottom: 6px;
+      word-break: break-word;
+      text-shadow: 0 2px 13px #a21caf90, 0 0 6px #f9a8d477;
+      opacity: 0;
+      animation: fadeInMsg 2s 1s forwards;
+    }
+    @keyframes fadeInMsg {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .emoji {
+      font-size: 1.07em;
+      filter: drop-shadow(0 0 7px #fff) brightness(1.4);
+      vertical-align: middle;
+    }
+    /* Corazones flotantes */
+    .floating-heart {
+      position: fixed;
+      bottom: -25px;
+      color: #f472b6;
+      font-size: 23px;
+      animation: floatUp 9s ease-in infinite;
+      opacity: 0.89;
+      pointer-events: none;
+      z-index: 10;
+      filter: blur(0.7px) drop-shadow(0 3px 19px #d8b4fe);
+    }
+    @keyframes floatUp {
+      0% {transform: translateY(0) scale(.8);}
+      40% {transform: translateY(-220px) scale(1);}
+      99% {opacity: 1;}
+      100% {transform: translateY(-640px) scale(1.19); opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-row">
+    <span class="heart-row-shape">💜</span>
+    <span class="heart-row-shape">💖</span>
+    <span class="heart-row-shape">💜</span>
+  </div>
+  <h1>Para Yami 💜<span class="sparkle"></span></h1>
+  <div class="card">
+    <div class="img-container">
+      <img src="imagen.jpg" alt="Foto de Yami">
+    </div>
+    <div class="divider"></div>
+    <div class="message">
+      Hola Yami <span class="emoji">💖</span>, ¿sabes algo? Me gustas muchísimo… no he dejado de pensar en ti, en lo bien que me haces sentir y en lo bonito que son mis días y mis noches contigo. <span class="emoji">🌙✨</span><br><br>
+      Sí, me gustas, y aunque no sé exactamente cómo pasó, solo sé que quiero estar contigo, conocerte más y crear un vínculo más fuerte entre nosotros.<br>
+      No te digo que te amo todavía, porque creo que el amor no nace de un día para otro, sino que se construye con respeto, confianza y lealtad.<br><br>
+      Quizá pienses que estoy loco <span class="emoji">😅</span> porque hace poco terminé una relación, pero quiero ser sincero contigo: no me quedé en el pasado, no tengo nada que sanar, nadie me hizo daño y yo tampoco lo hice. Simplemente ya no me sentía bien ahí, incluso antes de que tú llegaras a mi vida.<br><br>
+      Hoy lo único que sé es que me encantas, que quiero aprender a quererte y conocerte de verdad, para que podamos tener una relación bonita y sincera. <span class="emoji">❤️</span> Lo que decidas lo voy a respetar, siempre. Y no olvides lo que siempre te digo: eres valiosa y nunca dejes que nadie te haga sentir menos. <span class="emoji">🌹</span><br><br>
+      Te quiero mucho, Yami <span class="emoji">💕</span>
+    </div>
+  </div>
+  <!-- Corazones flotantes -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("floating-heart");
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 14 + 20 + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 9000);
+    }
+    setInterval(createHeart, 870);
+  </script>
+</body>
+</html>
